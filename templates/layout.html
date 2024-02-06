@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <!-- for dynamic title -->
+    {% block title %}
+    {{ section.title }}
+    {% endblock %}
+</head>
+<body>
+    <!-- Logo Section -->
+    <div class="header-part">
+        <div class="logo">
+            <a href="index.html"><img class="logo-img" src="{% static 'images/wonder_blue.png' %}" alt="logo"></a>
+            <h1>Wonder Peak Adventure</h1>
+        </div>
+        <div class="header-text">
+            <div class="nub">
+                <img class="phone" src="{% static 'images/phone.JPG' %}" alt="phone">
+                <span class="nub1">+977-9880695785</span>
+            </div>
+            <div class="address">
+                <span>Suryabinayak-8, Bhaktapur, Nepal</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- === Navbar Section === -->
+    <div class="navbar">
+        <ul>
+            <li><a class="nav-sec" href="index.html">Home</a></li>
+            <li><a class="nav-sec" href="tour.html">Nepal Tour</a></li>
+            <li><a class="nav-sec" href="trekking.html">Nepal Trekking</a></li>
+            <li><a class="nav-sec" href="blog.html">Our Blogs</a></li>
+            <li><a class="nav-sec" href="gallery.html">Gallery</a></li>
+            <li><a class="nav-sec" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <!-- === Image Wrapper === -->
+
+    <div class="home-sec">
+        <div class="image-wapper">
+            <img src="{% static 'images/mountain.jpg' %}" alt="mountain">
+        </div>
+        <div class="text-wrapper">
+            <span class="head-main">"Paradise in the Himalayas"</span>
+            <span class="head-last">-Nepal</span>
+        </div>
+    </div>
+
+    <div class="main">
+        {% block main_content %}
+
+        {% endblock %}
+    </div>
+
+   
+
+    <!-- === Footer Section === -->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="content">
+                <h2>Contact Info</h2>
+                <div class="contact-info">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Suryabinayak-8, Bhaktapur, Nepal
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            +977 9880695785
+                        </li>
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            info@wonderpeakadventure.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Trip Category</h2>
+                <div class="contact-info">
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">Popular Package</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">Featured Holidays</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">Best Selling Holidays</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Trip Category</h2>
+                <div class="contact-info">
+                    <ul>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">Welcome to Wonder Peak Adventure</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">About Us</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">News</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">Testimonials</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-hashnode"></i>
+                            <a href="">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <h2>We Are With</h2>
+                <div class="contact-info">
+                    <ul>
+                        <li style="display: flex;">
+                            <div class="imgflex">
+                                <img src="{% static 'images/a-1.png' %}" alt="image not found">
+                            </div>
+                            <div class="imgflex">
+                                <img src="{% static 'images/a-3.png' %}" alt="image not found">
+                            </div>
+                            <div class="imgflex">
+                                <img src="{% static 'images/a-4.png' %}" alt="image not found">
+                            </div>
+                            <div class="imgflex">
+                                <img src="{% static 'images/a-5.png' %}" alt="image not found">
+                            </div>
+                        </li>
+                        <li style="display: flex;">
+                            <div class="recommend">
+                                <img src="{% static 'images/trip-add.png' %}" alt="image not found">
+                            </div>
+                            <button class="travel-review">Trave Review</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+       
+        
+        <div class="footer-bottom">
+            <div class="footer-text">
+                <span>&copy;20222 Wonder Peak Adventure All Rights Reserved.Develop by: Python Group</span>
+                <div class="accept">
+                    <span class="we">We accept:</span>
+                    <div class="cash-card">
+                        <img src="{% static 'images/master.jpg' %}" alt="image not found">
+                    </div>
+                    <div class="cash-card">
+                        <img src="{% static 'images/visa.jpg' %}" alt="image not found">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <button class="chat">Message Us</button>
+    </div>
+    
+</body>
+</html>
